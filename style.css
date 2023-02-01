@@ -55,6 +55,11 @@ textarea::placeholder {
     color: white;
     font-weight: 1rem;
     font-weight: bold;
+    transition: 0.5s all;
+}
+
+.boton-encriptar:hover {
+    transform: scale(1.05);
 }
 
 .boton-desencriptar {
@@ -90,7 +95,8 @@ textarea::placeholder {
 }
 
 .texto-transformado img {
-    width: 200px;
+    width: 100%;
+    margin-bottom: 2rem;
     align-content:center;
 }
 

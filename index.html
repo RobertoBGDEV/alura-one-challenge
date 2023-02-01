@@ -17,15 +17,18 @@
         </header>
         <main>
             <div class="area-texto">
-                <textarea name="texto-entrada" id="" cols="60" rows="15" placeholder="Ingrese el texto aqui"></textarea>
-                <button type="submit" class="boton-encriptar">Encriptar</button>
+                <textarea name="texto-entrada" id="texto-ingresado" cols="60" rows="15" placeholder="Ingrese el texto aqui"></textarea>
+                <button type="submit" class="boton-encriptar" id="encriptador">Encriptar</button>
                 <button type="submit" class="boton-desencriptar">Desencriptar</button>
             </div>
-            <div class="texto-transformado">
+            <div class="texto-transformado" id="divtexto">
                 <img src="imagenes/Muñeco.png" alt="">
                 <h3>Ningún mensaje fue encontrado</h3>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-        </main>     
+        </main>    
+        <script src="funcionalidad.js"></script> 
     </body>
 </html>
+
+
