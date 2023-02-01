@@ -82,6 +82,11 @@ textarea::placeholder {
     font-weight: bold;
     font-size: 1rem;
     margin-left: 10px;
+    transition: 0.5s all;
+}
+
+.boton-desencriptar:hover {
+    transform: scale(1.05);
 }
 
 .texto-transformado {
