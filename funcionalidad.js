@@ -84,9 +84,7 @@ function DesencriptarTexto() {
 
 function CopiarTexto() {
     navigator.clipboard.writeText(document.getElementById("texto-copiar").innerText).then(() => {
-      alert(document.getElementById("texto-copiar").innerText);
     }, () => {
-      alert(document.getElementById("texto-copiar").innerText);
     });
   }
 
