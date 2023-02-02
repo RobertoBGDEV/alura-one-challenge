@@ -4,6 +4,7 @@ function EncriptarTexto() {
 
     if (array == "") {
         textoCodificado = '<img src="imagenes/Muñeco.png" alt=""><h3>Ningún mensaje fue encontrado</h3><p>Ingresa el texto que desees encriptar o desencriptar.</p>';
+        document.getElementById("divtexto").innerHTML = textoCodificado;
     } else {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
@@ -28,9 +29,12 @@ function EncriptarTexto() {
                     break;
             }
         }
+        textoCodificado = '<p id="texto-copiar">' + textoCodificado + '</p>' + '<button type="submit" class="boton-copiar" id="copiar">Copiar</button>'
+        document.getElementById("divtexto").innerHTML = textoCodificado;
+        var button3 = document.getElementById("copiar");
+        button3.onclick = CopiarTexto;
+        button3.style.display = 'block';
     }
-
-    document.getElementById("divtexto").innerHTML = textoCodificado;
 }
 
 function DesencriptarTexto() {
@@ -39,6 +43,7 @@ function DesencriptarTexto() {
 
     if (array == "") {
         textoCodificado = '<img src="imagenes/Muñeco.png" alt=""><h3>Ningún mensaje fue encontrado</h3><p>Ingresa el texto que desees encriptar o desencriptar.</p>';
+        document.getElementById("divtexto").innerHTML = textoCodificado;
     } else {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
@@ -68,13 +73,29 @@ function DesencriptarTexto() {
                     break;
             }
         }
+        textoCodificado = '<p id="texto-copiar">' + textoCodificado + '</p>' + '<button type="submit" class="boton-copiar" id="copiar">Copiar</button>'
+        document.getElementById("divtexto").innerHTML = textoCodificado;
+        var button3 = document.getElementById("copiar");
+        button3.onclick = CopiarTexto;
+        button3.style.display = 'block';
     }
-
-    document.getElementById("divtexto").innerHTML = textoCodificado;
+    
 }
+
+function CopiarTexto() {
+    navigator.clipboard.writeText(document.getElementById("texto-copiar").innerText).then(() => {
+      alert(document.getElementById("texto-copiar").innerText);
+    }, () => {
+      alert(document.getElementById("texto-copiar").innerText);
+    });
+  }
 
 var button = document.getElementById("encriptador");
 button.onclick = EncriptarTexto;
 
 var button2 = document.getElementById("desencriptador");
 button2.onclick = DesencriptarTexto;
+
+var button3 = document.getElementById("copiar");
+button3.onclick = CopiarTexto;
+button3.style.display = 'none';

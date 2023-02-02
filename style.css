@@ -89,6 +89,34 @@ textarea::placeholder {
     transform: scale(1.05);
 }
 
+.boton-copiar {
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 90%;
+    height: 67px;
+    background: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: center;
+    color: #0A3871;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: 0.5s all;
+    margin: 70% 0 0 0;
+}
+
+.boton-copiar:hover {
+    transform: scale(1.05);
+}
+
 .texto-transformado {
     width: 15%;
     background-color: white;
